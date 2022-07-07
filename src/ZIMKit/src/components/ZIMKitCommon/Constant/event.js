@@ -1,0 +1,20 @@
+export var EventName;
+(function (EventName) {
+    EventName["zimError"] = "error";
+    EventName["zimConnectionStateChanged"] = "connectionStateChanged";
+    EventName["zimTokenWillExpire"] = "tokenWillExpire";
+    EventName["zimReceivePeerMessage"] = "receivePeerMessage";
+    EventName["zimReceiveGroupMessage"] = "receiveGroupMessage";
+    EventName["zimConversationTotalUnreadMessageCountUpdated"] = "conversationTotalUnreadMessageCountUpdated";
+    EventName["zimConversationChanged"] = "conversationChanged";
+    EventName["zimKitIsLoggedIn"] = "isLoggedIn";
+    EventName["zimKitLoginUserUpdate"] = "loginUserUpdate";
+    EventName["zimKitDeleteConversation"] = "deleteConversation";
+    EventName["zimKitCurrentConversationUpdate"] = "currentConversationUpdate";
+    EventName["zimKitConversationListUpdate"] = "conversationListUpdate";
+    EventName["zimKitConversationListQueryAbnormally"] = "conversationListQueryAbnormally";
+    EventName["zimKitCreateGroup"] = "createGroup";
+    EventName["zimKitCurrentChatUpdated"] = "currentChatUpdated";
+    EventName["zimKitCurrentMessageListUpdated"] = "messageListUpdated";
+    EventName["zimKitCurrentGroupInfoUpdated"] = "currentGroupInfoUpdated";
+})(EventName || (EventName = {}));
