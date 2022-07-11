@@ -34,6 +34,7 @@ export default class ZIMKitManager {
         return this.zim.login(userInfo, token).then(() => {
             this.token = token;
             this.isLoggedIn = true;
+            this.eventHandler.actionListener(EventName.zimKitIsLoggedIn);
             this.eventHandler.actionListener(EventName.zimKitLoginUserUpdate, userInfo);
         });
     }
