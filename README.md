@@ -1,51 +1,54 @@
-## 概述
+## Overview
 
-本文介绍如何快速跑通示例源码，体验基础的 ZIMKit 集成方案。
+The following describe how to run the sample code of the In-app Chat UIKit.
 
-## 准备环境
+## Prepare the environment
 
-在运行示例源码前，请确保开发环境满足以下要求：
+Before you begin, make sure your environment meets the following:
+- Chrome 58 or later.
+- Node.js 14.18.1 or later
+- The device is connected to the internet.
 
-- 电脑安装了 58 或以上版本的 Chrome 浏览器。
-- 安装 node.js ，推荐使用 14.18.1 或以上版本。
-- 设备已连接到网络。
+## Prerequisites
 
-## 前提条件
+- Go to [ZEGOCLOUD Admin Console\|_blank](https://console.zegocloud.com/) and do the following:
+    1.  Create a project, and get the `AppID` and `ServerSecret` of your project. 
+    2.  Subscribe the **In-app Chat** service.
 
-已在 ZEGO 控制台 创建项目，获取到了接入 ZIM SDK 服务所需的 AppID 和 ServerSecret。ZIM 服务权限不是默认开启的，使用前，请先在 ZEGO 控制台 自助开通 ZIM 服务（详情请参考 项目管理 - 即时通讯）、或联系 ZEGO 技术支持开通。
+## Run the sample code (React)
 
-## 示例源码运行指引（React）
-
-### 示例源码目录结构
+### Sample code directory structure
 
 ```bash
-├── README.md                     # 项目运行说明
+├── README.md                     # README file
 ├── package.json
 ├── public
 ├── src
-│   ├── pages                     # 业务组件目录
-│   ├── store                     # 业务状态管理
-│   ├── util                      # 工具类方法
-│   ├── ZIMKit                    # ZIMKit SDK
-│   ├── index.jsx                 # 项目入口文件
-│   ├── config.js                 # SDK 配置文件
-├── tsconfig.json                 # ts 配置文件
+│   ├── pages                     # Business component directory
+│   ├── store                     # Business state management
+│   ├── util                      # Utilities
+│   ├── ZIMKit                    # In-app Chat UIKit SDK
+│   ├── index.jsx                 # Project entry file
+│   ├── config.js                 # SDK config file
+├── tsconfig.json                 # ts config file
 ```
 
-### 运行示例源码
+### Run the sample code
 
-1. 下载上方示例源码，打开 “src” 文件夹下的 “config.js” 文件，并使用本文 [前提条件] 已获取的 AppID 和 ServerSecret 正确填写，并保存。
+1. Download the sample code, open the `config.js` file under the src`` folder, and fill in the AppID and ServerSecret you get from the ZEGOCLOUD Admin Console.
+If you generate the Token using your own server, fill in the method that used to generate the Token in the `tokenURL`.
 
    ```javascript
    const appConfig = {
-     appID: 0, // 填写申请的 AppID
-     serverSecret: '' // 填写申请的 ServerSecret
+     appID: 0,        // Fill in the App ID you get. 
+     serverSecret: '' // Run the ServerSecret you get.
+     tokenURL: ''     // Your API method that used to generate Tokens.
    };
    ```
 
-2. 依次运行以下命令来启动项目。
+2. Run the following code in order to run the sample code.
 
 ```bash
-    npm install # 安装依赖包
-    npm start   # 依赖包安装成功后，启动项目
+    npm install # Install dependencies.
+    npm start   # After installing the dependencies, execute this to run the project. 
 ```
